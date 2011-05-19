@@ -1,0 +1,5 @@
+iOS Example of how to perform a Search against the Twitter Search API.
+
+Uses JSON parsing, asynchronous download, and NSNotification center.
+
+Corresponds to matching blog entry at http://remarkablepixels.com/blog
