@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'SimpleTwitterSearchTests' target in the 'SimpleTwitterSearchTests' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif
