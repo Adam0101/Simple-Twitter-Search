@@ -22,6 +22,14 @@
 		0C550CBE137ADC9C008FC05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C550CBC137ADC9C008FC05C /* InfoPlist.strings */; };
 		0C550CC1137ADC9C008FC05C /* SimpleTwitterSearchTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0C550CC0137ADC9C008FC05C /* SimpleTwitterSearchTests.h */; };
 		0C550CC3137ADC9C008FC05C /* SimpleTwitterSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CC2137ADC9C008FC05C /* SimpleTwitterSearchTests.m */; };
+		0C550CCE137ADCD2008FC05C /* SearchTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CCD137ADCD2008FC05C /* SearchTwitter.m */; };
+		0C550CDA137AE1CE008FC05C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CD1137AE1CE008FC05C /* NSObject+SBJSON.m */; };
+		0C550CDB137AE1CE008FC05C /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CD3137AE1CE008FC05C /* NSString+SBJSON.m */; };
+		0C550CDC137AE1CE008FC05C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CD5137AE1CE008FC05C /* SBJsonBase.m */; };
+		0C550CDD137AE1CE008FC05C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CD7137AE1CE008FC05C /* SBJsonParser.m */; };
+		0C550CDE137AE1CE008FC05C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C550CD9137AE1CE008FC05C /* SBJsonWriter.m */; };
+		0CBBC67513817737002DC898 /* SearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBC67313817737002DC898 /* SearchResults.m */; };
+		0CBBC67613817737002DC898 /* SearchResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBBC67413817737002DC898 /* SearchResults.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +47,38 @@
 		0C550C93137ADC9C008FC05C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C550C95137ADC9C008FC05C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C550C97137ADC9C008FC05C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0C550C9B137ADC9C008FC05C /* SimpleTwitterSearch-Info.plist */ = {isa = PBXFileReference; path = "SimpleTwitterSearch-Info.plist"; sourceTree = "<group>"; };
+		0C550C9B137ADC9C008FC05C /* SimpleTwitterSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTwitterSearch-Info.plist"; sourceTree = "<group>"; };
 		0C550C9D137ADC9C008FC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0C550C9F137ADC9C008FC05C /* SimpleTwitterSearch-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleTwitterSearch-Prefix.pch"; sourceTree = "<group>"; };
+		0C550C9F137ADC9C008FC05C /* SimpleTwitterSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTwitterSearch-Prefix.pch"; sourceTree = "<group>"; };
 		0C550CA0137ADC9C008FC05C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0C550CA2137ADC9C008FC05C /* SimpleTwitterSearchAppDelegate.h */ = {isa = PBXFileReference; path = SimpleTwitterSearchAppDelegate.h; sourceTree = "<group>"; };
+		0C550CA2137ADC9C008FC05C /* SimpleTwitterSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTwitterSearchAppDelegate.h; sourceTree = "<group>"; };
 		0C550CA3137ADC9C008FC05C /* SimpleTwitterSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTwitterSearchAppDelegate.m; sourceTree = "<group>"; };
 		0C550CA6137ADC9C008FC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		0C550CA8137ADC9C008FC05C /* SimpleTwitterSearchViewController.h */ = {isa = PBXFileReference; path = SimpleTwitterSearchViewController.h; sourceTree = "<group>"; };
+		0C550CA8137ADC9C008FC05C /* SimpleTwitterSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTwitterSearchViewController.h; sourceTree = "<group>"; };
 		0C550CA9137ADC9C008FC05C /* SimpleTwitterSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTwitterSearchViewController.m; sourceTree = "<group>"; };
 		0C550CAC137ADC9C008FC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SimpleTwitterSearchViewController.xib; sourceTree = "<group>"; };
 		0C550CB3137ADC9C008FC05C /* SimpleTwitterSearchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTwitterSearchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C550CBB137ADC9C008FC05C /* SimpleTwitterSearchTests-Info.plist */ = {isa = PBXFileReference; path = "SimpleTwitterSearchTests-Info.plist"; sourceTree = "<group>"; };
+		0C550CBB137ADC9C008FC05C /* SimpleTwitterSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTwitterSearchTests-Info.plist"; sourceTree = "<group>"; };
 		0C550CBD137ADC9C008FC05C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0C550CBF137ADC9C008FC05C /* SimpleTwitterSearchTests-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleTwitterSearchTests-Prefix.pch"; sourceTree = "<group>"; };
+		0C550CBF137ADC9C008FC05C /* SimpleTwitterSearchTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTwitterSearchTests-Prefix.pch"; sourceTree = "<group>"; };
 		0C550CC0137ADC9C008FC05C /* SimpleTwitterSearchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTwitterSearchTests.h; sourceTree = "<group>"; };
 		0C550CC2137ADC9C008FC05C /* SimpleTwitterSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTwitterSearchTests.m; sourceTree = "<group>"; };
+		0C550CCC137ADCD2008FC05C /* SearchTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTwitter.h; sourceTree = "<group>"; };
+		0C550CCD137ADCD2008FC05C /* SearchTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTwitter.m; sourceTree = "<group>"; };
+		0C550CCF137AE1CE008FC05C /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		0C550CD0137AE1CE008FC05C /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		0C550CD1137AE1CE008FC05C /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		0C550CD2137AE1CE008FC05C /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		0C550CD3137AE1CE008FC05C /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		0C550CD4137AE1CE008FC05C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		0C550CD5137AE1CE008FC05C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		0C550CD6137AE1CE008FC05C /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		0C550CD7137AE1CE008FC05C /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		0C550CD8137AE1CE008FC05C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		0C550CD9137AE1CE008FC05C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		0CBBC67213817737002DC898 /* SearchResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResults.h; sourceTree = "<group>"; };
+		0CBBC67313817737002DC898 /* SearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResults.m; sourceTree = "<group>"; };
+		0CBBC67413817737002DC898 /* SearchResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResults.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +142,13 @@
 				0C550CA5137ADC9C008FC05C /* MainWindow.xib */,
 				0C550CA8137ADC9C008FC05C /* SimpleTwitterSearchViewController.h */,
 				0C550CA9137ADC9C008FC05C /* SimpleTwitterSearchViewController.m */,
+				0C550CCC137ADCD2008FC05C /* SearchTwitter.h */,
+				0C550CCD137ADCD2008FC05C /* SearchTwitter.m */,
+				0CBBC67213817737002DC898 /* SearchResults.h */,
+				0CBBC67313817737002DC898 /* SearchResults.m */,
+				0C550CDF137AE1DE008FC05C /* JSON */,
 				0C550CAB137ADC9C008FC05C /* SimpleTwitterSearchViewController.xib */,
+				0CBBC67413817737002DC898 /* SearchResults.xib */,
 				0C550C9A137ADC9C008FC05C /* Supporting Files */,
 			);
 			path = SimpleTwitterSearch;
@@ -153,6 +183,24 @@
 				0C550CBF137ADC9C008FC05C /* SimpleTwitterSearchTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C550CDF137AE1DE008FC05C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0C550CCF137AE1CE008FC05C /* JSON.h */,
+				0C550CD0137AE1CE008FC05C /* NSObject+SBJSON.h */,
+				0C550CD1137AE1CE008FC05C /* NSObject+SBJSON.m */,
+				0C550CD2137AE1CE008FC05C /* NSString+SBJSON.h */,
+				0C550CD3137AE1CE008FC05C /* NSString+SBJSON.m */,
+				0C550CD4137AE1CE008FC05C /* SBJsonBase.h */,
+				0C550CD5137AE1CE008FC05C /* SBJsonBase.m */,
+				0C550CD6137AE1CE008FC05C /* SBJsonParser.h */,
+				0C550CD7137AE1CE008FC05C /* SBJsonParser.m */,
+				0C550CD8137AE1CE008FC05C /* SBJsonWriter.h */,
+				0C550CD9137AE1CE008FC05C /* SBJsonWriter.m */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +276,7 @@
 				0C550C9E137ADC9C008FC05C /* InfoPlist.strings in Resources */,
 				0C550CA7137ADC9C008FC05C /* MainWindow.xib in Resources */,
 				0C550CAD137ADC9C008FC05C /* SimpleTwitterSearchViewController.xib in Resources */,
+				0CBBC67613817737002DC898 /* SearchResults.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +315,13 @@
 				0C550CA1137ADC9C008FC05C /* main.m in Sources */,
 				0C550CA4137ADC9C008FC05C /* SimpleTwitterSearchAppDelegate.m in Sources */,
 				0C550CAA137ADC9C008FC05C /* SimpleTwitterSearchViewController.m in Sources */,
+				0C550CCE137ADCD2008FC05C /* SearchTwitter.m in Sources */,
+				0C550CDA137AE1CE008FC05C /* NSObject+SBJSON.m in Sources */,
+				0C550CDB137AE1CE008FC05C /* NSString+SBJSON.m in Sources */,
+				0C550CDC137AE1CE008FC05C /* SBJsonBase.m in Sources */,
+				0C550CDD137AE1CE008FC05C /* SBJsonParser.m in Sources */,
+				0C550CDE137AE1CE008FC05C /* SBJsonWriter.m in Sources */,
+				0CBBC67513817737002DC898 /* SearchResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +502,7 @@
 				0C550CC8137ADC9C008FC05C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C550CC9137ADC9C008FC05C /* Build configuration list for PBXNativeTarget "SimpleTwitterSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +511,7 @@
 				0C550CCB137ADC9C008FC05C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,12 +7,22 @@
 //
 
 #import "SimpleTwitterSearchViewController.h"
+#import "SearchTwitter.h"
+
 
 @implementation SimpleTwitterSearchViewController
 
 - (void)dealloc
 {
+    [searchTheTweets release];
     [super dealloc];
+}
+
+- (SearchTwitter *)searchTheTweets {
+    if(!searchTheTweets) {
+        searchTheTweets = [[SearchTwitter alloc] init];
+    }
+    return searchTheTweets;
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,20 +35,31 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+       
 }
-*/
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+#pragma mark -
+#pragma mark Button action
+- (void)goSearch {
+    //go grab the data from searchTwitter class
+    [[self searchTheTweets] grabData:[searchTerm text]];
+    
+    SearchResults *viewController = [[SearchResults alloc] initWithNibName:@"SearchResults" bundle:[NSBundle mainBundle]];
+    //viewController.delegate = self;
+      
+    [viewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentModalViewController:viewController animated:YES];
+    
+    //[self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
+    viewController = nil;
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

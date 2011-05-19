@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchTwitter.h"
+#import "SearchResults.h"
 
 @interface SimpleTwitterSearchViewController : UIViewController {
+    SearchTwitter *searchTheTweets;
     
+    IBOutlet UIButton *searchButton;
+    IBOutlet UITextField *searchTerm;
 }
+
+-(IBAction)goSearch;
+
 
 @end
